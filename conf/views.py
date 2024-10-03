@@ -1,15 +1,16 @@
 from django.conf import settings
 from django.shortcuts import render
 
-# from emails import services as emails_services
-# from emails.models import Email, EmailVerificationEvent
-# from emails.forms import EmailForm
+from emails import services as emails_services
+from emails.forms import EmailForm
+
+EMAIL_ADDRESS = settings.EMAIL_ADDRESS
 
 
 def login_logout_template_view(request):
     return render(request, "auth/login-logout.html", {})
 
-EMAIL_ADDRESS = settings.EMAIL_ADDRESS
+
 def home_view(request, *args, **kwargs):
     template_name = "home.html"
     # request POST data
