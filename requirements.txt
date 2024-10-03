@@ -2,3 +2,5 @@ Django>=5.1,<5.2
 pillow==10.4.0
 cloudinary
 python-decouple
+django-htmx
+django-tailwind[reload]
